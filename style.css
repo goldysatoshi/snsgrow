@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+body {
+  /* color: #555; */
+  font-family: "Sawarabi Mincho", sans-serif;
+}
+
+.header {
+  background-color: rgba(#255, #255, #255, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 1rem;
+}
+h1 {
+  font-family: serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  /* margin: 1rem 0 0 0; */
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-list li {
+  padding-left: 1rem;
+  text-align: center;
+}
+
+.menu-list li a {
+  font-weight: 300;
+}
+
+.manu-list li a:hover {
+  cursor: pointer;
+}
+.menu-list a::before {
+  display: block;
+  margin-bottom: 0.25rem;
+  /* Font Awesome */
+  font-weight: 700;
+  color: #555;
+  font-size: 1.25rem;
+}
+
+/* main */
+
+.main-warapper {
+  background: url(/images/sns-top.jpg) no-repeat right top / 70vw auto;
+  padding: 5.5rem 1rem 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: color;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.8rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  font-family: serif;
+}
+
+.submit {
+  margin-top: 2rem;
+  background-color: #5ea0be;
+  border-radius: 5%;
+}
+
+.submit a {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  color: rgba(255, 255, 255);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* 円グラフセクション */
+
+.graph-wrapper {
+  background: rgb(253, 250, 239);
+  padding: 0.3rem 1rem 3rem;
+  margin-top: 0.5rem;
+}
+
+.tit {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  display: inline-block;
+  font-family: serif;
+}
+
+.graph-wrapper p {
+  width: 100%;
+  margin: 1rem 0 2rem;
+}
+
+.tit::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 10rem;
+  background: #d0bea2;
+  margin: 2rem 0 0.5rem;
+}
+/* li a::before {
+    content: "";
+} */
+
+/* 棒グラフセクション */
+
+.bar-wrapper {
+  padding: 1.5rem 1rem 3rem;
+  margin-top: 0.5rem;
+}
+
+.bar-wrapper p {
+  width: 100%;
+  margin: 1rem 0 2.5rem;
+}
+
+/* 運用タイムラインセクション */
+
+.procedure {
+  background: rgb(253, 250, 239);
+}
+
+.procedure-wrapper {
+  padding: 1.5rem 1rem 3rem;
+  margin-top: 0.5rem;
+}
+
+.procedure-wrapper .timeline {
+  list-style: decimal inside;
+  font-family: serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.procedure-wrapper .timeline-item {
+  margin-bottom: 2rem;
+}
+
+.procedure-wrapper h4 {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: serif;
+  display: inline-block;
+}
+
+.procedure-wrapper p {
+  width: 100%;
+  margin: 1rem 0 2.5rem;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* footer */
+footer {
+    background: #5ea0be;
+    padding: 2rem 1rem 1rem;
+}
+
+.footer-wrapper .submit {
+    margin: 0;
+    background-color: #fefefe;
+    border-radius: 5%;
+}
+
+.footer-wrapper .submit a {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    color: #5ea0be;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .footer-wrapper .footer-list {
+      color: #fefefe;
+      margin: 2rem;
+      text-align: center;
+  }
+
+  .footer-wrapper .footer-item {
+      padding-bottom: 1rem;
+  }
+
+
+/* グラフ */
+.chart {
+  margin: 0;
+}
+.ct-label {
+  font-size: 1rem;
+  fill: #fff;
+}
+.ct-series-a .ct-slice-pie {
+  fill: #579bee;
+}
+.ct-series-b .ct-slice-pie {
+  fill: #2f5de1;
+}
+.ct-series-c .ct-slice-pie {
+  fill: #65a3bd;
+}
+.ct-series-d .ct-slice-pie {
+  fill: #bbb;
+}
+
+/* 棒グラフ */
+.ct-series-a .ct-bar {
+  stroke: #3a7edf;
+}
+
+.ct-bar {
+  stroke-width: 16%;
+}
+
+/* 表 */
+table {
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+th,
+td {
+  padding: 1.25rem;
+  display: table-cell;
+}
+th {
+  width: 30%;
+  vertical-align: middle;
+}
+td {
+  width: 70%;
+}
+
+/* 奇数行の背景色を #fee、偶数行の背景色を #ffe */
+tr:nth-child(odd) {
+  background: #fee;
+}
+
+tr:nth-child(even) {
+  background: #ffe;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-color: #fefefe;
+  }
+  .header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5vh 4rem;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-top: -1rem;
+  }
+
+  li a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 1.5rem 0;
+    font-family: serif;
+  }
+
+  li:last-child a {
+    padding-right: 0;
+  }
+
+  .menu-list a::before {
+    content: "";
+  }
+
+  /* main */
+
+  .main-warapper {
+    max-width: 1200px;
+    padding: 11vh 4rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: none;
+    mix-blend-mode: exclusion;
+    color: #ffffff;
+  }
+
+  .main-warapper p {
+    font-size: 1.3rem;
+    width: 50vw;
+    color: white;
+    text-shadow: 0px 0px 4px #000000;
+    font-weight: 600;
+    /* mix-blend-mode: exclusion;
+        color: #ffffff; */
+  }
+
+  .submit {
+    width: 50vh;
+  }
+
+  /* 円グラフセクション */
+
+  .graph {
+    background: rgb(253, 250, 239);
+  }
+
+  .graph-wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 4rem;
+    margin: 4rem auto 0;
+  }
+
+  .textbox {
+    width: 50vw;
+  }
+
+  .flex-reverce {
+    flex-direction: row-reverse;
+  }
+
+  /* 棒グラフセクション */
+
+  .bar-wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 4rem;
+    margin: 4rem auto 0;
+  }
+
+  /* 運用手順グラフセクション */
+
+  .procedure-wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 4rem 7rem;
+    margin: 4rem auto 0;
+  }
+
+  .procedure-wrapper .textbox {
+    width: 90vw;
+  }
+
+  .procedure-wrapper .timeline-item {
+    display: flex;
+    margin: 0;
+  }
+
+  .timeline-item h4 {
+    width: 100%;
+    margin: 1rem 0 2.5rem;
+  }
+
+  .timeline .timeline-content {
+    border-left: 5px solid #d0bea2;
+    padding: 1.5rem 0 1.5rem 2.5rem;
+    margin: 0rem 0 0rem;
+    width: 76%;
+    position: relative;
+  }
+
+  .timeline .timeline-content::before {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #5ea0be;
+    text-align: center;
+    padding: 0.1rem;
+    position: absolute;
+    top: 1.5rem;
+    left: -1.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+    font-size: 1.25rem;
+  }
+  .icon-file::before {
+    content: "\f56e";
+  }
+
+  .icon-hearing::before {
+    content: "\f2a2";
+  }
+
+  .icon-built::before {
+    content: "\f6e3";
+  }
+
+  .icon-serve::before {
+    content: "\e529";
+  }
+
+  /* footer */
+footer {
+    padding: 3rem 1rem 1rem;
+}
+
+.footer-wrapper .submit {
+    margin: 0 auto;
+}
+
+.footer-wrapper .submit a {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .footer-wrapper .footer-list {
+      max-width: 700px;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin: 3rem auto 2rem;
+  }
+
+  .footer-wrapper .footer-item a {
+      font-weight: 500;
+  }
+}
