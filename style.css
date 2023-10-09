@@ -67,7 +67,7 @@ body {
 h1 {
   font-family: serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   /* margin: 1rem 0 0 0; */
 }
@@ -85,6 +85,7 @@ h1 {
 .menu-list li a {
   font-weight: 300;
 }
+
 
 .manu-list li a:hover {
   cursor: pointer;
@@ -110,10 +111,14 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin: 1.8rem 0;
+  margin: 1.8rem 0 calc(98% - 71vw);
   background-color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   font-family: serif;
+}
+
+.main-warapper p {
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
 }
 
 .submit {
@@ -316,7 +321,7 @@ tr:nth-child(even) {
     padding: 5vh 4rem;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
     margin-top: -1rem;
   }
 
@@ -346,14 +351,15 @@ tr:nth-child(even) {
   }
 
   h2 {
+    margin: 1.8rem 0 ;
     font-size: 3.5rem;
     font-weight: 800;
     background: none;
-    mix-blend-mode: exclusion;
-    color: #ffffff;
+    text-shadow: 0 0 11px rgba(255, 255, 255, 1);
   }
 
   .main-warapper p {
+    max-width: 600px;
     font-size: 1.3rem;
     width: 50vw;
     color: white;
